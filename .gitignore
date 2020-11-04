@@ -1,0 +1,9 @@
+/src/htmlcov/
+/Lib/
+/Scripts/
+/share/
+/Include/
+/UNKNOWN.egg-info/
+/pyvenv.cfg
+/src/.coverage
+/.tox/
