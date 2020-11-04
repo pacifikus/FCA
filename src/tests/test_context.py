@@ -1,6 +1,8 @@
-from src.fca.context import Context
 from unittest import TestCase
+
 from parameterized import parameterized
+
+from src.fca.context import Context
 
 
 class ContextTestCase(TestCase):
