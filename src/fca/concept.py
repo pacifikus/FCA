@@ -11,4 +11,4 @@ class Concept:
         return self.G == other.G and self.M == other.M
 
     def __repr__(self):
-        return "({0})\n({1})".format(', '.join(self.G), ', '.join(self.M))
+        return "({0})\n({1})".format(", ".join(self.G), ", ".join(self.M))

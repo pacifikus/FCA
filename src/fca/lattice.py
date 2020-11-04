@@ -44,13 +44,13 @@ class Lattice:
             pos[n] = (i / (count + 1) * lev_mult, 1 - i * level_num)
 
         nx.draw_networkx_labels(G, pos, labels, font_size=12)
-        nx.draw_networkx_nodes(G, pos, range(len(self.C)), node_color='r')
+        nx.draw_networkx_nodes(G, pos, range(len(self.C)), node_color="r")
         nx.draw_networkx_edges(G, pos)
         plt.show()
 
     def to_json(self, path):
-        with open(path, 'w') as outfile:
+        with open(path, "w") as outfile:
             json.dump(self.__dict__, outfile)
 
     def __repr__(self):
-        return "({0}) ({1})".format(', '.join(self.C), ', '.join(self.E))
+        return "({0}) ({1})".format(", ".join(self.C), ", ".join(self.E))

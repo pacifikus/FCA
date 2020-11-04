@@ -10,11 +10,25 @@ class ConceptTestCase(TestCase):
     Concept class checks
     """
 
-    @parameterized.expand([
-        [[Concept(['girl'], ['female', 'juvenile']), Concept(['girl'], ['female', 'juvenile'])], True],
-        [[Concept(['girl'], ['female', 'juvenile']), Concept(['girl'], ['female'])], False],
-        [[Concept(['boy'], ['human']), Concept(['girl'], ['human'])], False],
-    ])
+    @parameterized.expand(
+        [
+            [
+                [
+                    Concept(["girl"], ["female", "juvenile"]),
+                    Concept(["girl"], ["female", "juvenile"]),
+                ],
+                True,
+            ],
+            [
+                [
+                    Concept(["girl"], ["female", "juvenile"]),
+                    Concept(["girl"], ["female"]),
+                ],
+                False,
+            ],
+            [[Concept(["boy"], ["human"]), Concept(["girl"], ["human"])], False],
+        ]
+    )
     def test_eq(self, concepts, expected):
         """
         Test for the eq operator
